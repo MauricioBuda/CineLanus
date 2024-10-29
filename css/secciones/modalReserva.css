@@ -58,7 +58,7 @@
   }
   
   .section-formulario input,
-  .section-formulario textarea,
+  .section-formulario,
   .select-reserva {
     width: 95%;
     padding: 10px;
@@ -119,8 +119,15 @@
       height: 6vw;
       font-size: 5vw;
     }
+
+    .section-formulario input,
+    .section-formulario,
+    .select-reserva {
+      margin-bottom: 6vw;
+
+    }
     
-     .form-formulario {
+    .form-formulario {
       width: 90%;
     }
     

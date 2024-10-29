@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css"/>
+
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lobster&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+
+
+        <!-- FAVICON -->
+        <link rel="apple-touch-icon" sizes="180x180" href="public/LogoCine512x512.jpg">
+        <link rel="icon" href="public/LogoCine512x512.jpg" type="logo_chico">
+        <link rel="shortcut icon" href="public/LogoCine512x512.jpg" type="image/x-icon">
+
+
+    <title> Cine Lanús </title>
+  </head>
+  <body>
+
+
+
+        <!-- INICIO MENÚ ↓ -->
+        <nav id="navbar" class="nav-navbar">
+
+          <div>
+            <a href="index.html">
+              <img class="logo-menu" src="./public/LogoCine.jpg" alt="logo">
+            </a>
+          </div>
+
+          <div class="div-menu">
+            <ul class="ul-menu">
+    
+              <li>
+                <a href="#inicio"> Inicio </a>
+              </li>
+              <li>
+                <a href="#reservar"> ¡Reservá tu lugar! </a>
+              </li>
+              <li>
+                <a id="sugerenciasMenu" href="#sugerencias"> Sugerinos alguna peli </a>
+              </li>
+              <li>
+                <a target="_blank" href="mailto:cinelanus@gmail.com?subject=Cortometraje &body=Nombre: %0A%0A Celular: %0A%0A Mensaje: Hola! Dejo adjunto mi cortometraje %0A%0A"> ¡Envianos tu cortometraje!</a>
+              </li>
+              <li>
+                <a href="#nosotros"> Nosotros </a>
+              </li>
+    
+            </ul>
+          </div>
+        </nav>
+        <!-- FIN MENÚ ↑ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- EMPIEZA INICIO ↓-->
+         <section id="inicio" class="section-inicio">
+
+          <h1 class="h1-inicio"> ¡Te esperamos en nuestra próxima función! </h1>
+          <div class="contador" id="countdown"></div>
+         </section>
+        <!-- TERMINA INICIO ↑-->
+
+
+
+
+
+
+
+
+
+
+        <!-- EMPIEZA RESERVAR LUGAR ↓-->
+         <section id="reservar" class="section-reservar">
+
+            <div class="div-vacantes">
+              <h2 class="h2-reservar">Vacantes disponibles para este sábado:</h2>
+              <h1 class="h1-vacantes" id="vacantesDisponibles"> </h1>
+            </div>
+            <button class="boton-reservar" id="botonReservar">RESERVAR</button>
+            <h5 class="h5-reservar"> ¡Vacantes limitadas! Si necesitas cancelar una reserva, por favor avisanos a <a target="_blank" href="mailto:cinelanus@gmail.com?subject=Consulta/aviso sobre función &body=Nombre: %0A%0A Celular: %0A%0A Consulta/aviso: %0A%0A">cinelanus@gmail.com</a> </h5>
+
+            <img class="pochoclos" src="./public/pochoclos.png" alt="pochoclos">
+            <img class="ticket" src="./public/ticketCine-removebg-preview.png" alt="ticket">
+            <img class="rollo" src="./public/rolloCine-removebg-preview.png" alt="rollo">
+            <img class="camara" src="./public/camaraCine-removebg-preview.png" alt="camara">
+            <img class="pochoclos2" src="./public/pochoclos.png" alt="pochoclos">
+            <img class="ticket2" src="./public/ticketCine-removebg-preview.png" alt="ticket">
+            <img class="rollo2" src="./public/rolloCine-removebg-preview.png" alt="rollo">
+            <img class="camara2" src="./public/camaraCine-removebg-preview.png" alt="camara">
+            <img class="ticket3" src="./public/ticketCine-removebg-preview.png" alt="ticket">
+
+         </section>
+        <!-- TERMINA RESERVAR LUGAR ↑-->
+
+
+
+
+
+
+
+
+
+<!-- EMPIEZA MODAL RESERVA ↓-->
+<section id="modalReserva" class="section-formulario aplicarDisplayNone">
+
+  <h2>Te vamos a solicitar solo unos datos para efectuar la reserva:</h2>
+  <button  id="button-x-reserva" class="button-x-form"> X </button>
+
+  <form class="form-formulario" id="contactForm">
+
+      <input type="text" id="name" name="name" placeholder="Nombre" required>
+
+      <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+
+      <select class="select-reserva" name="" id="entradasPedidas">
+        <option selected value="" disabled> Cantidad de entradas </option>
+        <option value="1"> 1 </option>
+        <option value="2"> 2 </option>
+        <option value="3"> 3 </option>
+        <option value="4"> 4 </option>
+        <option value="5"> 5 </option>
+      </select>
+
+      <p class="p-formulario">Muchas gracias, ¡te esperamos! 😊</p>
+
+      <button class="boton-enviar-form" type="submit">ENVIAR</button>
+
+  </form>
+
+</section>
+<!-- TERMINA MODAL RESERVA ↑-->
+
+
+
+
+
+
+
+
+
+<!-- EMPIEZA MODAL SUGERENCIA ↓-->
+<section id="modalSugerencia" class="section-formulario section-sugerencia aplicarDisplayNone">
+
+  <h2> ¡Contanos que peli te gustaría que pasemos! </h2>
+  <button  id="button-x-sugerencia" class="button-x-form"> X </button>
+
+  <form class="form-formulario" id="contactForm2">
+
+      <input type="text" id="name2" name="name" placeholder="Tu nombre" required>
+
+      <input type="text" id="pelicula" name="pelicula" placeholder="Película" required>
+
+      <p class="p-formulario"> ¡Muchas gracias! 😊</p>
+
+      <button class="boton-enviar-form" type="submit">ENVIAR</button>
+
+  </form>
+
+</section>
+<!-- TERMINA MODAL SUGERENCIA ↑-->
+
+
+
+
+
+
+
+
+
+<!-- EMPIEZA NOSOTROS ↓ -->
+ <section class="nosotros" id="nosotros">
+
+  <h3 class="h3-nosotros"> Todos los sábados a las 18.30hs podes encontrarnos en Juan B. Justo 2982, centro cultural "Las Papafritas", Lanús</h3>
+  <h4 class="h4-nosotros">¡La entrada es una donación! No olvides traer un alimento para donar. Así vas a pasar una linda experiencia, y además ayudando a gente que lo necesita 😊 </h4>
+  <iframe class="iframe-nosotros" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d579.6943720631883!2d-58.3871005767417!3d-34.72417869228107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccd442360fd6f%3A0xd9e2f10063c0861a!2sCultural%20Las%20Papafritas!5e0!3m2!1ses!2sar!4v1730221168640!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ 
+</section>
+<!-- TERMINA NOSOTROS ↑ -->
+
+
+
+
+
+
+
+
+
+<!-- JS ↓ -->
+<script type="module" src="./js/app.js"></script>
+<script type="module" src="./js/contador.js"></script>
+
+<!-- FIREBASE ↓ -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+<!-- SWEET ALERT ↓ -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- EMAIL JS ↓ -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+      emailjs.init({
+        publicKey: "Fi7tRLyP7u6zkhofu",
+      });
+    })();
+  </script>
+
+
+  </body>
+</html>

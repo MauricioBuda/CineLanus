@@ -1,0 +1,27 @@
+.nosotros{
+    padding-top: 20vh;
+    height: 100vh;
+    background-color: #560000EE;
+}
+
+.h3-nosotros{
+    text-align: center;
+    margin: 5vh auto 0 auto;
+    width: 40%;
+    color: #f2a739;
+}
+
+.h4-nosotros{
+    text-align: center;
+    width: 35%;
+    color: #f2a739;
+    margin: 10vh auto 5vh auto;
+}
+
+.iframe-nosotros{
+    margin: 0 37% 0 37%;
+    width: 26vw;
+    height: 30vh;
+    border-radius: 10%;
+}
+

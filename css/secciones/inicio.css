@@ -1,0 +1,37 @@
+/* EMPIEZA INICIO ↓*/
+
+
+.section-inicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+    background-image: url(./../../public/Cine.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: space-around;
+    margin-top: 20vh;
+    scroll-margin-top: 20vh;
+
+  }
+  
+  .h1-inicio{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 3vw;
+  }
+  
+  .contador{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    height: 18vw;
+    width: 18vw;
+    background-color: rgb(255, 255, 255, 0.4);
+    font-size: 2.3vw;
+  }
+
+
+  /* TEMIRNA INICIO ↑*/

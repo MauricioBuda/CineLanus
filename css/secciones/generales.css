@@ -1,0 +1,33 @@
+/* EMPIEZA GENERALES ↓*/
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+  }
+  
+  a{
+    text-decoration: none;
+  }
+  
+  ul{
+    list-style-type: none ;
+  }
+
+  .aplicarDisplayNone{
+    display: none!important;
+  }
+
+  .aplicarBorroso{
+    filter: blur(25px);
+  }
+
+
+
+  /* TERMINA GENERALES ↑*/

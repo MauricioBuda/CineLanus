@@ -1,0 +1,106 @@
+/* EMPIEZA RESERVAR ↓*/
+
+
+.section-reservar{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding-top: 20vh;
+    background-color: #f2a739;
+  }
+  
+  .div-vacantes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8vh;
+  }
+
+  .h2-reservar{
+    font-size: 3vw;
+  }
+  
+  .h1-vacantes{
+    font-size: 4vw;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    padding: 1vw;
+  }
+  
+  .boton-reservar{
+    border-radius: 10px;
+    background-color: #560000BB;
+    padding: 1rem;
+    border: none;
+    width: 25%;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+    margin: 15vh auto 20vh auto;
+    color: white;
+    font-size: 2vw;
+  }
+  
+  .h5-reservar{
+    text-align: center;
+    margin-bottom: 10vh;
+    font-size: 1vw;
+  }
+
+  .span-mail{
+    font-weight: 999;
+  }
+  
+  .section-reservar img {
+    width: 5vw;
+    position: absolute;
+  }
+  
+  .pochoclos{
+    top: 120%;
+    left: 12%;
+  }
+  
+  .pochoclos2{
+    top: 140%;
+    left: 85%;
+  }
+  
+  .ticket{
+    top: 190%;
+    left: 2%;
+  }
+  
+  .ticket2{
+    top: 165%;
+    left: 70%;
+  }
+  
+  .ticket3{
+    top: 120%;
+    left: 94%;
+  }
+  
+  .camara{
+    top: 175%;
+    left: 90%;
+  }
+  
+  .camara2{
+    top: 150%;
+    left: 5%;
+  }
+  
+  .rollo{
+    top: 171%;
+    left: 20%;
+  }
+  
+  .rollo2{
+    top: 193%;
+    left: 80%;
+  }
+
+
+  /* TERMINA RESERVAR ↑*/

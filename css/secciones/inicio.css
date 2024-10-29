@@ -34,4 +34,36 @@
   }
 
 
+
+
+
+
+
+
+
+      /* MEDIA QUERYS ↓*/
+
+      @media screen and (max-width: 524px) {
+        .section-inicio{
+          justify-content: space-evenly;
+          height: 85vh;
+          margin-top: 15vh;
+          scroll-margin-top: 15vh;
+        }
+        
+        .h1-inicio{
+          text-align: center;
+          margin: 0 5vw;
+          font-size: 6vw;
+        }
+        
+        .contador{
+          height: 60vw;
+          width: 60vw;
+          background-color: rgb(255, 255, 255, 0.4);
+          font-size: 8vw;
+        }
+      }
+
+
   /* TEMIRNA INICIO ↑*/

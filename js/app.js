@@ -115,6 +115,7 @@ function descontarVacante(vacantes) {
 let seccionNavBar = document.getElementById('navbar');
 let seccionInicio = document.getElementById('inicio');
 let seccionReservar = document.getElementById('reservar')
+let seccionNosotros = document.getElementById('nosotros')
 
 let seccionModalReserva = document.getElementById('modalReserva');
 let seccionModalSugerencia = document.getElementById('modalSugerencia')
@@ -160,6 +161,7 @@ function mostrarOcultarModalReserva () {
     seccionInicio.classList.toggle('aplicarBorroso');
     seccionNavBar.classList.toggle('aplicarBorroso');
     seccionReservar.classList.toggle('aplicarBorroso');
+    nosotros.classList.toggle('aplicarBorroso');
 }
 
 
@@ -169,6 +171,7 @@ function mostrarOcultarModalSugerencia () {
     seccionInicio.classList.toggle('aplicarBorroso');
     seccionNavBar.classList.toggle('aplicarBorroso');
     seccionReservar.classList.toggle('aplicarBorroso');
+    nosotros.classList.toggle('aplicarBorroso');
 }
 
 

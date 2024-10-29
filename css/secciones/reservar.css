@@ -103,4 +103,89 @@
   }
 
 
+
+
+
+
+
+
+
+        /* MEDIA QUERYS ↓*/
+
+        @media screen and (max-width: 524px) {
+          
+          .div-vacantes{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 8vh;
+          }
+        
+          .h2-reservar{
+            width: 60%;
+            text-align: center;
+            font-size: 6vw;
+          }
+          
+          .h1-vacantes{
+            font-size: 15vw;
+            padding: 4vw;
+          }
+          
+          .boton-reservar{
+            width: 60%;
+            height: 20vh;
+            font-size: 5vw;
+          }
+          
+          .h5-reservar{
+            text-align: center;
+            margin: 0 2vw 10vh;
+            font-size: 3vw;
+          }
+          
+          .section-reservar img {
+            width: 15vw;
+          }
+            
+          .pochoclos{
+            top: 115%;
+            left: 5%;
+          }
+
+          .pochoclos2{
+            top: 140%;
+            left: 68%;
+          }
+          
+          .ticket{
+            top: 187%;
+          }
+          
+          .ticket2{
+            left: 80%;
+          }
+          
+          .ticket3{
+            left: 85%;
+          }
+          
+          .camara{
+            top: 177%;
+            left: 60%;
+          }
+          
+          .rollo{
+            top: 171%;
+            left: 9%;
+          }
+          
+          .rollo2{
+            top: 188%;
+            left: 88%;
+          }
+        }
+
+
   /* TERMINA RESERVAR ↑*/

@@ -1,7 +1,12 @@
+/* EMPIEZA NOSOTROS ↓ */
+
+
+
 .nosotros{
     padding-top: 20vh;
     height: 100vh;
     background-color: #560000EE;
+    scroll-margin-top: 20vh;
 }
 
 .h3-nosotros{
@@ -24,4 +29,41 @@
     height: 30vh;
     border-radius: 10%;
 }
+
+
+
+
+
+
+
+
+
+
+      /* MEDIA QUERYS ↓*/
+
+      @media screen and (max-width: 524px) {
+        .nosotros{
+            /* padding-top: 15vh; */
+            height: 100vh;
+            background-color: #560000EE;
+            scroll-margin-top: 0vh;
+        }
+        
+        .h3-nosotros{
+            margin: 0 auto ;
+            width: 90%;
+        }
+        
+        .h4-nosotros{
+            width: 90%;
+        }
+        
+        .iframe-nosotros{
+            margin: 0 10% 0 10%;
+            width: 80%;
+            height: 30vh;
+            border-radius: 10%;
+        }
+      }
+      /* TERMINA NOSOTROS ↑ */
 

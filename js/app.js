@@ -31,6 +31,7 @@ const analytics = getAnalytics(app);
 
 ////////////////////////////////////////////////////////////////////////////////////////////
 
+let hayFuncion
 
 
 
@@ -38,8 +39,30 @@ const analytics = getAnalytics(app);
 
 
 
+// Función para saber cuantas vacantes quedan ↓
+async function hayONoHayFuncion () {
+  const dbRef = ref(getDatabase());
+  await get(child(dbRef, `HayFuncion`)).then((snapshot) => {
+    if (snapshot.exists()) {
+      hayFuncion = snapshot.val()
+      console.log(hayFuncion)
+    } else {
+      console.log("Error");
+    }
+  }).catch((error) => {
+    console.error(error);
+  });
+}
 
-// Función para saber cauntas vacantes quedan ↓
+hayONoHayFuncion()
+
+
+
+
+
+
+
+// Función para saber cuantas vacantes quedan ↓
 async function cantidadVacantesDisponibles () {
     const dbRef = ref(getDatabase());
     let vacantes
@@ -140,7 +163,17 @@ let cortosMenu = document.getElementById('cortosMenu');
 let vacantesDisponibles = document.getElementById('vacantesDisponibles');
 
 
+seccionNavBar.classList.add()
 
+
+
+
+// Veo si hay o no función
+if(hayFuncion){
+  console.log("hay")
+} else {
+  console.log("no hay")
+}
 
 
 

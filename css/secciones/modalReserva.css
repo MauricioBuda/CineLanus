@@ -47,7 +47,7 @@
   }
   
    .form-formulario {
-    width: 70%;
+    width: 95%;
   }
   
   .section-formulario h2 {
@@ -60,7 +60,7 @@
   .section-formulario input,
   .section-formulario,
   .select-reserva {
-    width: 95%;
+    width: 60%;
     padding: 10px;
     margin-bottom: 2vw;
     border: 1px solid #ddd;
@@ -111,7 +111,7 @@
   @media screen and (max-width: 524px) {
     .section-formulario{
       width: 90vw;
-      height: 80vh;
+      height: 90vh;
     }
     
     .button-x-form{
@@ -124,6 +124,7 @@
     .section-formulario,
     .select-reserva {
       margin-bottom: 6vw;
+      width: 80%;
 
     }
     

@@ -1,4 +1,10 @@
-function startCountdown() {
+import { hayONoHayFuncion } from "./app";
+
+
+async function startCountdown() {
+
+  await hayONoHayFuncion()
+
     // Obtiene la fecha actual
     const now = new Date();
   
@@ -22,6 +28,8 @@ function startCountdown() {
       const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+
   
       // Muestra el contador en el HTML
       document.getElementById("countdown").innerHTML =
@@ -34,7 +42,17 @@ function startCountdown() {
       }
     }, 1000);
   }
+
+  async function contadorOCancelada() {
+    let respuesta = await hayONoHayFuncion();
+    if (respuesta) {
+      startCountdown();
+    } else {
+      document.getElementById("countdown").innerText = "X"
+    }
+  }
+
+  contadorOCancelada();
   
   // Inicializa la cuenta regresiva
-  startCountdown();
   

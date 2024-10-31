@@ -32,6 +32,7 @@ const analytics = getAnalytics(app);
 ////////////////////////////////////////////////////////////////////////////////////////////
 
 let hayFuncion
+let laPeli
 
 
 
@@ -39,22 +40,44 @@ let hayFuncion
 
 
 
-// Función para saber cuantas vacantes quedan ↓
+// Función para saber si hay función ↓
 async function hayONoHayFuncion () {
   const dbRef = ref(getDatabase());
   await get(child(dbRef, `HayFuncion`)).then((snapshot) => {
     if (snapshot.exists()) {
       hayFuncion = snapshot.val()
-      console.log(hayFuncion)
     } else {
       console.log("Error");
     }
   }).catch((error) => {
     console.error(error);
   });
+  return hayFuncion
 }
 
-hayONoHayFuncion()
+
+
+
+
+
+
+
+// Función para saber que pelicula hay ↓
+async function hayPeli () {
+  const dbRef = ref(getDatabase());
+  await get(child(dbRef, `Pelicula`)).then((snapshot) => {
+    if (snapshot.exists()) {
+      laPeli = snapshot.val()
+    } else {
+      console.log("Error");
+    }
+  }).catch((error) => {
+    console.error(error);
+  });
+  return laPeli
+}
+
+hayPeli();
 
 
 
@@ -92,13 +115,13 @@ function descontarVacante(vacantes) {
   get(vacantesRef).then((snapshot) => {
     if (snapshot.exists()) {
       const vacantesActuales = snapshot.val().vacantes || 0; // Valor actual o 0 si no existe
-      const nuevoValor = vacantesActuales - vacantes; // Sumar 2 al valor actual
+      const nuevoValor = vacantesActuales - vacantes;
 
       // Escribir el nuevo valor en la base de datos
       set(vacantesRef, { vacantes: nuevoValor })
         .then(() => {
           console.log("Vacantes actualizadas:", nuevoValor);
-          obtenerVacantesDisponibles()
+          // obtenerVacantesDisponibles()
         })
         .catch((error) => {
           console.error("Error al actualizar vacantes:", error);
@@ -155,25 +178,21 @@ let btnXmodalSugerencia = document.getElementById('button-x-sugerencia');
 btnXmodalSugerencia.addEventListener('click', mostrarOcultarModalSugerencia);
 
 let sugerencias = document.getElementById('sugerenciasMenu');
-sugerencias.addEventListener('click', mostrarOcultarModalSugerencia)
+sugerencias.addEventListener('click', mostrarOcultarModalSugerencia);
 let cortosMenu = document.getElementById('cortosMenu');
 
 
 // Variables ↓
 let vacantesDisponibles = document.getElementById('vacantesDisponibles');
 
+let divPelicula = document.getElementById('divPelicula');
+let spanPelicula = document.getElementById('spanPelicula');
+let divCancelacion = document.getElementById('divCancelacion');
 
-seccionNavBar.classList.add()
 
 
 
 
-// Veo si hay o no función
-if(hayFuncion){
-  console.log("hay")
-} else {
-  console.log("no hay")
-}
 
 
 
@@ -188,23 +207,75 @@ cantidadVacantesDisponibles();
 
 
 
+
+
+// Corroborar si hay función, para renderizar el cartel correcto
+async function confirmarSiHayFuncion () {
+  let confirmacion = await hayONoHayFuncion()
+  if(confirmacion){
+    divPelicula.classList.remove('aplicarDisplayNone')
+    divCancelacion.classList.add('aplicarDisplayNone')
+  } else {
+    divPelicula.classList.add('aplicarDisplayNone')
+    divCancelacion.classList.remove('aplicarDisplayNone')
+  }
+}
+
+confirmarSiHayFuncion();
+
+
+
+
+
+
+
+
+
+// Renderizar próxima película
+async function quePeliculaRenderizar () {
+  let peliParaRenderizar = await hayPeli()
+  if (spanPelicula && peliParaRenderizar) {
+  spanPelicula.textContent = peliParaRenderizar;
+  } else {
+    spanPelicula.textContent = "-";
+  }
+}
+
+
+  quePeliculaRenderizar();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function mostrarOcultarModalReserva () {
     seccionModalReserva.classList.toggle('aplicarDisplayNone');
-
+    console.log("sdf")
     seccionInicio.classList.toggle('aplicarBorroso');
     seccionNavBar.classList.toggle('aplicarBorroso');
     seccionReservar.classList.toggle('aplicarBorroso');
-    nosotros.classList.toggle('aplicarBorroso');
+    seccionNosotros.classList.toggle('aplicarBorroso');
 }
 
 
 function mostrarOcultarModalSugerencia () {
     seccionModalSugerencia.classList.toggle('aplicarDisplayNone');
-
+    console.log("fghfhfhfgh")
     seccionInicio.classList.toggle('aplicarBorroso');
     seccionNavBar.classList.toggle('aplicarBorroso');
     seccionReservar.classList.toggle('aplicarBorroso');
-    nosotros.classList.toggle('aplicarBorroso');
+    seccionNosotros.classList.toggle('aplicarBorroso');
 }
 
 
@@ -336,4 +407,4 @@ document.getElementById('contactForm2').addEventListener('submit', function(even
 
 
 
-
+export { hayONoHayFuncion }

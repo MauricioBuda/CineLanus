@@ -77,7 +77,19 @@
           <div class="contador" id="countdown"></div>
 
           <div id="divPelicula" class="div-pelicula aplicarDisplayNone">
-            <h5 class="h5-peli"> Este sábado &#160; → &#160; <span id="spanPelicula" class="span-pelicula"></span> </h5>
+            <!-- <h5 class="h5-peli"> Este sábado &#160; → &#160; <span id="spanPelicula" class="span-pelicula"></span> </h5> -->
+
+
+            <button class="btnModalPeli" id="openModalBtn"> ¿Que toca este sábado? </button>
+
+            <div id="modal" class="modal">
+              <div class="modal-content">
+                <span id="closeModalBtn" class="close">&times;</span>
+                <h2 class="h2-modal-peli"> Este sábado toca: </h2>
+                <span id="spanPelicula" class="span-pelicula-mobile"></span>
+              </div>
+            </div>
+            
           </div>
           
 
@@ -215,8 +227,13 @@
 
 
 
+<!-- CANVAS CONFETTI -->
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
 
 <!-- JS ↓ -->
+<script type="module" src="js/modalPelicula.js"></script>
 <script type="module" src="./js/app.js"></script>
 <script type="module" src="./js/contador.js"></script>
 
@@ -226,6 +243,7 @@
 
 <!-- SWEET ALERT ↓ -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
     <!-- EMAIL JS ↓ -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">

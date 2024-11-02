@@ -234,11 +234,11 @@ confirmarSiHayFuncion();
 // Renderizar próxima película
 async function quePeliculaRenderizar () {
   let peliParaRenderizar = await hayPeli()
-  if (spanPelicula && peliParaRenderizar) {
+  // if (spanPelicula && peliParaRenderizar) {
   spanPelicula.textContent = peliParaRenderizar;
-  } else {
-    spanPelicula.textContent = "-";
-  }
+  // } else {
+  //   spanPelicula.textContent = "-";
+  // }
 }
 
 

@@ -21,7 +21,7 @@
     left: 3%;
     font-weight: bold;
     font-size: 1.8vw;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.3);
     border: none;
     padding: 1vw;
     border-radius: 12%;
@@ -69,6 +69,8 @@
           .btnModalPeli{
             position: inherit;
             font-size: 4vw;
+            background-color: rgba(255, 255, 255, 0.6);
+            padding: 2vw;
           }
         }
 

@@ -261,7 +261,7 @@ async function quePeliculaRenderizar () {
 
 function mostrarOcultarModalReserva () {
     seccionModalReserva.classList.toggle('aplicarDisplayNone');
-    console.log("sdf")
+
     seccionInicio.classList.toggle('aplicarBorroso');
     seccionNavBar.classList.toggle('aplicarBorroso');
     seccionReservar.classList.toggle('aplicarBorroso');
@@ -271,7 +271,7 @@ function mostrarOcultarModalReserva () {
 
 function mostrarOcultarModalSugerencia () {
     seccionModalSugerencia.classList.toggle('aplicarDisplayNone');
-    console.log("fghfhfhfgh")
+
     seccionInicio.classList.toggle('aplicarBorroso');
     seccionNavBar.classList.toggle('aplicarBorroso');
     seccionReservar.classList.toggle('aplicarBorroso');

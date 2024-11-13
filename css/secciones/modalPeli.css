@@ -51,6 +51,21 @@
     cursor: pointer;
   }
 
+  .div-peli-trailer{
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+  }
+
+  .span-pelicula-mobile{
+    font-size: 3vw;
+    color: #560000;
+  }
+
+  .trailer{
+    font-size: 1vw;
+  }
+
 
 
 
@@ -72,6 +87,20 @@
             background-color: rgba(255, 255, 255, 0.6);
             padding: 2vw;
           }
+
+          .div-peli-trailer{
+            margin-top: 8vh;
+            gap: 8vh;
+          }
+        
+          .span-pelicula-mobile{
+            font-size: 8vw;
+          }
+        
+          .trailer{
+            font-size: 6vw;
+          }
+        
         }
 
 

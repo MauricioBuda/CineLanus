@@ -33,6 +33,7 @@ const analytics = getAnalytics(app);
 
 let hayFuncion
 let laPeli
+let trailerDB
 
 
 
@@ -55,6 +56,31 @@ async function hayONoHayFuncion () {
   return hayFuncion
 }
 
+
+
+
+
+
+
+
+
+// Función para saber si hay función ↓
+async function hayONoHayTrailer () {
+  const dbRef = ref(getDatabase());
+  await get(child(dbRef, `Trailer`)).then((snapshot) => {
+    if (snapshot.exists()) {
+      trailerDB = snapshot.val()
+      console.log(trailerDB)
+    } else {
+      console.log("Error");
+    }
+  }).catch((error) => {
+    console.error(error);
+  });
+  return trailerDB
+}
+
+hayONoHayTrailer()
 
 
 
@@ -188,6 +214,7 @@ let vacantesDisponibles = document.getElementById('vacantesDisponibles');
 let divPelicula = document.getElementById('divPelicula');
 let spanPelicula = document.getElementById('spanPelicula');
 let divCancelacion = document.getElementById('divCancelacion');
+let trailer = document.getElementById("trailer");
 
 
 
@@ -222,6 +249,27 @@ async function confirmarSiHayFuncion () {
 }
 
 confirmarSiHayFuncion();
+
+
+
+
+
+
+
+
+
+// Corroborar si hay función, para renderizar el cartel correcto
+async function confirmarSiHayTrailer () {
+  let linkDelTrailer = await hayONoHayTrailer()
+  if(!linkDelTrailer || linkDelTrailer === ''){
+    trailer.classList.add('aplicarDisplayNone')
+  } else {
+    trailer.classList.remove('aplicarDisplayNone')
+    trailer.href = linkDelTrailer;
+  }
+}
+
+confirmarSiHayTrailer();
 
 
 
